@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomStartView">
+        <attr name="normalstart" format="reference"/>
+        <attr name="selectstart" format="reference"/>
+        <attr name="startNumber" format="integer"/>
+        <attr name="interval" format="dimension"/>
+    </declare-styleable>
+</resources>
