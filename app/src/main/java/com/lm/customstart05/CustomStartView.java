@@ -104,9 +104,22 @@ public class CustomStartView extends View {
                 }
                 // 再去刷新显示
                 mCurrentGrade = currentGradeNumber;
+                if (mTouchNumberListener != null) {
+                    mTouchNumberListener.touchNumber(mCurrentGrade);
+                }
                 invalidate();
                 break;
         }
         return true;
+    }
+
+    private TouchNumberListener mTouchNumberListener;
+
+    public interface TouchNumberListener {
+        void touchNumber(int touchNumber);
+    }
+
+    public void setTouchNumberListener(TouchNumberListener touchNumberListener) {
+        this.mTouchNumberListener = touchNumberListener;
     }
 }
